@@ -20,7 +20,9 @@ public class ClientSocket extends Observable implements Runnable {
             String mensaje = "";
             do {
                 mensaje = bufferEntrada.readUTF();
+                System.out.println(mensaje);
                 this.setChanged();
+                //se envia los datos recividos del cliente a Update
                 this.notifyObservers(mensaje);
             } while (mensaje != "exit");
         } catch (IOException e) {
