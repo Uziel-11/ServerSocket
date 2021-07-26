@@ -25,7 +25,7 @@ import java.util.Observer;
 
 public class Controller implements Observer {
     ServerSocket serverSocket = null;
-    private final int PORT = 3001;
+    private final int PORT = 3000;
     private ArrayList<Nodo> poolSocket = new ArrayList<>();
 
     @FXML
